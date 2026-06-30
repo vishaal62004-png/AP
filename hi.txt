@@ -1,0 +1,415 @@
+Program 01A
+$ mkdir Program1a
+$ cd Program1a
+$ git init
+$ touch file1.txt
+Use gedit and add some content
+$ git status
+$ git add file1.txt
+$ git commit -m "Create file1.txt"
+$ git status
+Use gedit and do some changes in the file
+$ git status
+$ git add file1.txt
+$ git commit -m "Made changes in file1.txt"
+--------------------------------------------------------
+You can also add multiple  file in the git add 
+Example
+$ touch f2.txt f3.txt
+$ git status
+$ git add f2.txt f3.txt
+$ git commit -m "add two files"
+$ git status
+
+
+-----------------------------------------------------
+-----------------------------------------------------
+
+Program 1B
+
+$ mkdir Program1B
+$ cd Program1B
+$ git init
+$ touch f1.txt
+You can add the content (Option)
+$ git add f1.txt
+$ git commit -m "created file in main(master)"
+$ git checkout -b feature-branch
+$ git branch
+$ touch p1.txt
+$ git status
+$ git add p1.txt
+$ git commit -m "Created file in feature branch"
+$ git branch
+$ git checkout main or git checkout master
+$ git merge feature-branch
+
+
+Program 02A
+$ mkdir Program2A
+$ cd Program2A
+$ git init
+$ touch f1.txt
+Add the content to f1.txt using gedit
+$ git add f1.txt
+$ git commit -m "Save the file"
+$ git status
+change the content in f1.txt using gedit
+$ git stash save "Saved the changes in Local"
+$ git stash list
+$ git checkout -b star
+$ touch f2.txt
+$ git add f2.txt
+$ git commit -m "File in the star"
+$ git status
+Add the content to f2.txt using gedit
+$ git stash save "Saved the changes in Local of star"
+$ git stash list
+$ git stash drop stash@{0}
+$ git stash list
+$ git stash apply
+$ git stash list
+$ git stash clear 
+$ git stash list
+--------------------------------------------------------------
+--------------------------------------------------------------
+Program 02B
+$ git clone https://github.com/shakthivelk1ga23cs151-bit/Program_2B.git(Repo HTTPS Link)
+$ ls
+Program1B/  Program1a/  Program2A/  **Program_2B/**(Clone Repo)
+$ cd Program_2B/
+$ ls
+README.md
+$ cat README.md
+
+
+
+Program 3A
+$ git clone https://github.com/shakthivelk1ga23cs151-bit/Program_03A.git(Repo HTTPS Link)
+$ ls
+Program1B/  Program1a/  Program2A/  **Program_03A/**(clone Repo)  Program_2B/
+$ cd Program_03A/
+Create a file in github 
+$ git pull origin main
+$ ls
+README.md  **f1.txt** (file from github Repo)
+$ touch f2.txt
+Add the content to f1.txt using gedit
+$ git status
+$ git add f2.txt
+$ git commit -m "Add the file in local repo"
+$ git branch -M main
+$ git push -u origin main
+https//GitHub.com/"**Username**
+GitHub password:github token
+$ git checkout -b star
+$ touch f3.txt
+Add the content to f1.txt using gedit
+$ git add f3.txt
+$ git commit -m "File in star"
+$ git checkout main
+$ git rebase star
+$ git status
+$ git push origin star
+https//GitHub.com/"**Username**
+GitHubpassword:github token
+--------------------------------------------------------------
+--------------------------------------------------------------
+Program 3B
+$ mkdir pro03B
+$ cd pro03B
+$ git init
+$ touch f1.txt
+Add the content to f1.txt using gedit
+$ git add f1.txt
+$ git commit -m "Create file in main(master)"
+$ git checkout -b star
+$ git checkout main
+$ touch f2.txt
+$ git add f2.txt
+$ git commit -m "Create f2.txt in main"
+$ git checkout star
+$ touch f2.txt
+$ git add f2.txt
+$ git commit -m "Create f2.txt in star branch"
+$ git checkout main
+$ git merge star
+Edit the file using gedit 
+$ git add f2.txt
+$ git commit -m "Solved the merge problem"
+
+
+Program4A
+$ mkdir Pro4A
+$ cd Pro4A
+$ git init
+$ touch f1.txt f2.txt
+$ git add f1.txt f2.txt
+$ git commit -m "Created files in main"
+$ git remote add origin https://github.com/shakthivelk1ga23cs151-bit/Pro_4A.git(Repo HTTPS Link)
+$ git branch -M main
+$ git push origin main
+https//GitHub.com/"(username) press enter
+GitHub password (GitHub token) press enter
+$ git tag vi.0 HEAD
+$ git tag
+$ git push origin vi.0
+https//GitHub.com/"(username) press enter
+GitHub password (GitHub token) press enter
+------------------------------------------------------------------
+------------------------------------------------------------------
+Program4B
+$ mkdir Pro04B
+$ cd Pro04B
+$ git init
+$ touch f1.txt f2.txt
+$ git add f1.txt f2.txt
+$ git commit -m "Created files in main"
+$ git checkout -b star
+$ touch p1.txt
+$ git add p1.txt
+$ git commit -m "Create p1.txt in star"
+$ touch p2.txt
+$ git add p2.txt
+$ git commit -m "Create p2.txt in star"
+$ git branch
+$ git checkout main
+$ git log
+$ git checkout star
+$ git log
+$ git checkout main
+$ git cherry-pick ae904a28(commit id-1) a9aae1704(commit id-2) 
+[Syntax for cherry-pick
+$ git cherry-pick commit id-1 commit id-2 ..... commit id-n]
+$ git remote add origin https://github.com/shakthivelk1ga23cs151-bit/Pro_4B.git(Repo HTTPS Link)
+$ git branch -M main
+$ git push origin main
+https//GitHub.com/"(username) press enter
+GitHub password (GitHub token) press enter
+
+
+
+Program5A
+$ mkdir Pro5A
+$ cd Pro5A
+$ git init
+$ touch p1.txt
+$ git add p1.txt
+$ git commit -m "Created file in main"
+$ touch p2.txt
+$ git add p2.txt
+$ git commit -m "Created p2.txt in main"
+$ git log
+$ git show 677252a(commit id)
+$ git show fe977e7aef7255c2dee0e20f1af(commit id)
+------------------------------------------------------------------
+------------------------------------------------------------------
+Program5B
+$ mkdir Pro5B
+$ cd Pro5B
+$ git init
+$ touch file1.txt
+$ git add file1.txt
+$ git commit -m "file1 in main"
+$ touch file2.txt
+$ git add file2.txt
+$ git commit -m "file2 in main"
+$ git log --author="Shakthivelk24" --since="2026-04-02" --until="2026-04-10"
+[Syntax : $ git log --author="username" --since="Starting date" --until="Ending date" ]
+
+
+Program06A
+$ mkdir Pro06A
+$ cd Pro06A
+$ git init
+$ touch f1.txt
+Add the content to f1.txt using gedit
+$ git add f1.txt
+$ git commit -m "Created f1.txt"
+$ touch f2.txt
+$ git add f2.txt
+$ git commit -m "Created f2.txt"
+$ touch f3.txt
+$ git add f3.txt
+$ git commit -m "Created f3.txt"
+$ touch f4.txt
+$ git add f4.txt
+$ git commit -m "Created f4.txt"
+$ touch f5.txt
+$ git add f5.txt
+$ git commit -m "Created f5.txt"
+$ git log -n 5
+$ git log -n 5 --oneline
+$ git revert 4d10cd2986220(commit-id)
+  ctrl + X 
+  press Enter
+   or
+  esc
+  type :wq
+
+--------------------------------------------------------------
+--------------------------------------------------------------
+Program06B
+$ mkdir Pro06B
+$ cd Pro06B
+$ git init
+$ touch f1.txt
+$ git add f1.txt
+$ git commit -m "Create f1.txt"
+Add the content to f1.txt using gedit
+$ git config --global alias.st status
+$ git st
+$ git add f1.txt
+$ git commit -m "Added content to f1.txt"
+$ git config --global alias.lg "log --oneline --graph"
+$ git lg
+
+
+Program 07A
+
+$ mkdir pro07A
+$ cd pro07A
+$ git init
+$ echo "hello" >> f1.txt
+$ git add f1.txt
+$ git commit -m "Pro07A in Main(master)"
+$ git checkout -b star
+Switched to a new branch 'star'
+$ echo "hello from star">>f1.txt
+$ git add f1.txt
+$ git commit -m "Pro07A in star"
+$ git checkout main
+$ git merge --no-ff star -m "Merge star into main"
+$ git log --oneline
+$ git revert -m 1 40721f3(commit id)
+  ctrl + X 
+  press Enter
+   or
+  press esc
+  type :wq
+$ git log --oneline
+--------------------------------------------------------------
+--------------------------------------------------------------
+Program 07B
+
+$ mkdir pro7B
+$ cd pro7B
+$ git init
+$ echo "This is pro7b">>f1.txt
+$ git add f1.txt
+$ git commit -m "pro07B"
+$ git checkout -b star
+$ echo "This is pro7b in star">>f1.txt
+$ git add f1.txt
+$ git commit -m "pro07B in star"
+$ git checkout main
+$ git branch -D star
+$ git reflog
+$ git checkout -b star a967f8d
+$ git log
+
+Program08A
+$ mkdir pro08A
+$ cd pro08A
+$ git init
+$ touch f1.txt f2.txt f3.txt f4.txt f5.txt
+$ mkdir dir
+$ cd dir
+$ touch f1.txt
+$ git status
+$ cd ..
+$ git status
+# Preview which untracked files will be removed (safe check)
+$ git clean -n
+# Remove untracked files only
+$ git clean -f
+# Remove untracked files and untracked directories
+$ git clean -fd
+# Verify cleanup
+$ git status
+--------------------------------------------------------------
+--------------------------------------------------------------
+Program 08B
+$ mkdir pro08B
+$ cd pro08B
+$ git init
+$ echo "Hi how are you" >> f1.txt
+$ echo "Bye" >> f2.txt
+$ git add f1.txt f2.txt
+$ git commit -m "Program 08B"
+$ git archive --format=zip --output=main.zip main(branchName)
+$ git archive --format=tar --output=main.tar main(branchName)
+$ git log --oneline
+$ git archive --format=zip --output=commit.zip b18cb74(commit-id)
+
+Step 1: Login GitHub account -> Create a new repository
+-> repository name: [project 10]
+   add readme : on
+       ↓
+   Create repository
+Next add file -> Create new file
+                     ↓ 
+                 type print('Hello Jenkins')
+                      ↓ 
+                 save as hello.py (python file)
+                      ↓ 
+                 commint changes
+Step 2: Go back to Jenkins Home page
+     1 settings -> manage Jenkins -> plugins
+                                       ↓ 
+                                    installed plugins 
+                                        ↓
+                                    search for git                
+     2  -> Manage Jenkins -> Tools
+                              ↓
+                            git installation
+                              ↓
+                            goto cmd
+                              ↓
+                            type : where git
+                               ↓
+                            copy the path
+                               ↓  
+                            path : paste 
+                                     ↓     
+                                    save
+      3 -> manage Jenkins -> credentials -> system -> Global -> add credentials
+                                                                    ↓
+                                                                username: |
+                                                                password: |-> any name
+                                                                    ↓ 
+                                                                Create                                 
+Step 3: Go back to Jenkins
+            ↓
+        Create Job -> Enter a item name [Project 10]
+            ↓
+        Select Freestyle project
+            ↓
+           ok
+        Scrolldown Select source code management
+                           ↓
+                    Select git 
+                           ↓
+                    repository URL:paste[copy from GitHub]
+            Then Select credentials
+                         ↓
+                        Branch specifier -> (changes to main from master)
+                         ↓
+                        Additional behavior
+                         ↓
+                        click on add -> checkout to a sub directory
+            Then Select Build steps
+                          ↓
+                        add Build steps
+                          ↓
+                        select execute windows batch command
+                          ↓
+                        command -> type python hello.py
+                          ↓
+                        apply and save
+                          ↓
+                        Then Build                   
+
+
+
+
